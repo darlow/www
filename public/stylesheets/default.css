@@ -1,0 +1,59 @@
+body {
+  background: rgb(23,41,54);
+  color: rgb(207,236,45);
+  font-family: 'Museo Sans 500', 'Lucida Grande', 'Calibri', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+body section#wrapper {
+  width: 760px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+body section#wrapper h1 {
+  font-family: 'Helvetica Neue LT Std', 'Helvetica', sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  letter-spacing: -1px;
+  
+  text-indent: -999px;
+  overflow: hidden;
+  display: block;
+  margin: 20px auto;
+  
+  height: 320px;
+  width: 320px;
+  background: url(/images/logotype_320x320.png) no-repeat;
+}
+
+body section#wrapper p {
+  width: 320px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media only screen and (max-device-width: 480px) {
+  body section#wrapper {
+    width: 280px;
+  }
+  body section#wrapper h1 {
+    height: 240px;
+    width: 240px;
+    background: url(/images/logotype_240x240.png) no-repeat;
+  }
+  
+  body section#wrapper p {
+    width: 260px;
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  body section#wrapper h1 {
+    background: url(/images/logotype_480x480.png) no-repeat;
+    background-size: 240px 240px;
+  }
+}
