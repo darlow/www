@@ -10,6 +10,3 @@ class Darlow < Sinatra::Base
 end
 
 Dir[File.join(File.dirname(__FILE__), 'app/**/*.rb')].sort.each { |f| require f }
-
-DataMapper.finalize
-DataMapper.auto_upgrade!
