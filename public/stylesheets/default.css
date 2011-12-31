@@ -25,9 +25,9 @@ body section#wrapper h1 {
   display: block;
   margin: 20px auto;
   
-  height: 320px;
-  width: 320px;
-  background: url(/images/logotype_320x320.png) no-repeat;
+  height: 180px;
+  width: 480px;
+  background: url(/images/logotype_horizontal.png) no-repeat;
 }
 
 body section#wrapper p {
