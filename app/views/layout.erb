@@ -5,11 +5,11 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title><%= @page[:title] %></title>
   <link rel="stylesheet" href="/stylesheets/default.css" type="text/css">
-  <link rel="stylesheet" href="http://f.fontdeck.com/s/css/3lKQSuS+3AEOCsMgz+hGNY1Czck/darlow.dev/14640.css" type="text/css" />
+  <%= style "http://f.fontdeck.com/s/css/9Dd7dKRlsVFVm3xAivdE0m3aiPM/#{request.host}/14640.css" %>
   <link rel="icon" href="/images/icon.icns" sizes="128x128 48x48 32x32 16x16">
   <link rel="icon" href="/images/icon_16.png" type="image/png">  
 <% ["57", "72", "114"].each do |size| %>
-  <%= tag :link, :rel => "apple-touch-icon", :href => "/images/icon_#{size}.png", :sizes => "#{size}x#{size}" %>
+  <%= tag :link, :rel => "apple-touch-icon-precomposed", :href => "/images/icon_#{size}.png", :sizes => "#{size}x#{size}" %>
 <% end %>
 
   <meta name="viewport" content="width=device-width; user-scalable=no; initial-scale=1.0">

@@ -1,15 +1,38 @@
 body {
   background: rgb(23,41,54);
   color: rgb(207,236,45);
-  font-family: 'Museo Sans 500', 'Lucida Grande', 'Calibri', sans-serif;
-  font-weight: 500;
+  font-family: 'Museo Sans 100', 'Lucida Grande', 'Calibri', sans-serif;
+  font-weight: 100;
   font-size: 16px;
   margin: 0;
   padding: 0;
 }
 
+a {
+  color: rgb(255,255,90);
+  text-decoration: none;
+  font-family: 'Museo Sans 500', 'Lucida Grande', 'Calibri', sans-serif;
+  font-weight: 500;
+}
+a:hover {
+  color: rgb(23,41,54);
+  background-color: rgb(207,236,45);
+}
+/*a:hover {
+  color: rgb(255,255,173);
+  border-bottom: 2px solid rgba(255,255,173,0.3);
+}*/
+
+h2 {
+  font-family: 'Museo Sans 500', 'Lucida Grande', 'Calibri', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
 body section#wrapper {
-  width: 760px;
+  width: 480px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -30,10 +53,35 @@ body section#wrapper h1 {
   background: url(/images/logotype_horizontal.png) no-repeat;
 }
 
+body section#wrapper h2 {
+  margin: 50px 0 15px 0;
+}
+
 body section#wrapper p {
-  width: 320px;
+  width: 480px;
   margin: 0 auto;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+body section#wrapper p.introduction {
   text-align: center;
+  font-size: 16px;
+}
+
+body section#wrapper dl {
+  font-size: 14px;
+  margin: 15px 0;
+}
+
+body section#wrapper dl dt {
+  line-height: 1.5em;
+}
+body section#wrapper dl dd {
+  margin:-1.5em 0 0 0;
+  height: 1.5em;
+  line-height: 1.5em;
+  float:right;
 }
 
 @media only screen and (max-device-width: 480px) {
@@ -47,6 +95,10 @@ body section#wrapper p {
   }
   
   body section#wrapper p {
+    width: 280px;
+  }
+  
+  body section#wrapper p.introduction {
     width: 260px;
   }
 }
