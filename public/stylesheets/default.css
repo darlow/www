@@ -98,7 +98,7 @@ body section#wrapper dl dd a.twitter-follow-button {
   line-height: 1.5em;
   padding: 0 5px;
   color: rgb(23,41,54);
-  text-shadow: none;
+  text-shadow: 0 1px 0 rgb(207,236,45);
   
   background: -moz-linear-gradient(top,  rgb(255,255,90) 0%, rgb(149,173,49) 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(255,255,90)), color-stop(100%,rgb(149,173,49)));
