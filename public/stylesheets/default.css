@@ -1,6 +1,7 @@
 body {
   background: rgb(23,41,54);
   color: rgb(207,236,45);
+  text-shadow: 0 1px 1px rgb(11,20,27);
   font-family: 'Museo Sans 100', 'Lucida Grande', 'Calibri', sans-serif;
   font-weight: 100;
   font-size: 16px;
@@ -15,13 +16,15 @@ a {
   font-weight: 500;
 }
 a:hover {
-  color: rgb(23,41,54);
-  background-color: rgb(207,236,45);
-}
-/*a:hover {
   color: rgb(255,255,173);
   border-bottom: 2px solid rgba(255,255,173,0.3);
-}*/
+}
+a:active {
+  color: rgb(23,41,54);
+  background-color: rgb(207,236,45);
+  text-shadow: none;
+  border: none;
+}
 
 h2 {
   font-family: 'Museo Sans 500', 'Lucida Grande', 'Calibri', sans-serif;
