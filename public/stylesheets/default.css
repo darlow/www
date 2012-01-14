@@ -169,7 +169,7 @@ body footer#company p strong {
   body section#wrapper h1 {
     height: 240px;
     width: 240px;
-    background: url(/images/logotype_240x240.png) no-repeat;
+    background: url(/images/logotype_square.png) no-repeat;
   }
   
   body section#wrapper p {
@@ -181,13 +181,24 @@ body footer#company p strong {
   }
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
   body section#wrapper h1 {
-    background: url(/images/logotype_480x480.png) no-repeat;
+    background: url(/images/logotype_square@1.5x.png) no-repeat;
     background-size: 240px 240px;
   }
   
   body section#wrapper dl dd a.twitter-follow-button span {
-    background-image: url(/images/twitter_bird_retina.png);
+    background-image: url(/images/twitter_bird@1.5x.png);
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  body section#wrapper h1 {
+    background: url(/images/logotype_square@2x.png) no-repeat;
+    background-size: 240px 240px;
+  }
+  
+  body section#wrapper dl dd a.twitter-follow-button span {
+    background-image: url(/images/twitter_bird@2x.png);
   }
 }
