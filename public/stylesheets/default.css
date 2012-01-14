@@ -109,7 +109,13 @@ body section#wrapper dl dd a.twitter-follow-button {
   background: -webkit-linear-gradient(top,  rgb(255,255,90) 0%,rgb(149,173,49) 100%);
   background: -o-linear-gradient(top,  rgb(255,255,90) 0%,rgb(149,173,49) 100%);
   background: -ms-linear-gradient(top,  rgb(255,255,90) 0%,rgb(149,173,49) 100%);
-  background: linear-gradient(top,  rgb(255,255,90) 0%,rgb(149,173,49) 100%); 
+  background: linear-gradient(top,  rgb(255,255,90) 0%,rgb(149,173,49) 100%);
+  
+  -webkit-box-shadow: 0 1px 1px rgb(11,20,27);
+  -moz-box-shadow: 0 1px 1px rgb(11,20,27);
+  -ms-box-shadow: 0 1px 1px rgb(11,20,27);
+  -o-box-shadow: 0 1px 1px rgb(11,20,27);
+  box-shadow: 0 1px 1px rgb(11,20,27);
 }
 body section#wrapper dl dd a.twitter-follow-button:hover {
   background: -moz-linear-gradient(top,  rgb(255,255,90) 0%, rgb(172,198,48) 100%);
@@ -120,11 +126,11 @@ body section#wrapper dl dd a.twitter-follow-button:hover {
   background: linear-gradient(top,  rgb(255,255,90) 0%,rgb(172,198,48) 100%);
 }
 body section#wrapper dl dd a.twitter-follow-button:active {
-  -webkit-box-shadow: inset 0 1px 1px rgb(23,41,54);
-  -moz-box-shadow: inset 0 1px 1px rgb(23,41,54);
-  -ms-box-shadow: inset 0 1px 1px rgb(23,41,54);
-  -o-box-shadow: inset 0 1px 1px rgb(23,41,54);
-  box-shadow: inset 0 1px 1px rgb(23,41,54);
+  -webkit-box-shadow: inset 0 1px 1px rgb(23,41,54), 0 1px 1px rgb(11,20,27);
+  -moz-box-shadow: inset 0 1px 1px rgb(23,41,54), 0 1px 1px rgb(11,20,27);
+  -ms-box-shadow: inset 0 1px 1px rgb(23,41,54), 0 1px 1px rgb(11,20,27);
+  -o-box-shadow: inset 0 1px 1px rgb(23,41,54), 0 1px 1px rgb(11,20,27);
+  box-shadow: inset 0 1px 1px rgb(23,41,54), 0 1px 1px rgb(11,20,27);
   background: -moz-linear-gradient(top,  rgb(255,255,90) 0%, rgb(172,198,48) 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(255,255,90)), color-stop(100%,rgb(172,198,48)));
   background: -webkit-linear-gradient(top,  rgb(255,255,90) 0%,rgb(172,198,48) 100%);
