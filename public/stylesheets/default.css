@@ -54,6 +54,7 @@ body section#wrapper h1 {
   height: 180px;
   width: 480px;
   background: url(/images/logotype_horizontal.png) no-repeat;
+  background-size: 480px 180px;
 }
 
 body section#wrapper h2 {
@@ -162,6 +163,8 @@ body footer#company p strong {
   font-weight: 500;
 }
 
+/* low resolution mobile devices */
+
 @media only screen and (max-device-width: 480px) {
   body section#wrapper {
     width: 280px;
@@ -170,6 +173,7 @@ body footer#company p strong {
     height: 240px;
     width: 240px;
     background: url(/images/logotype_square.png) no-repeat;
+    background-size: 240px 240px;
   }
   
   body section#wrapper p {
@@ -181,10 +185,11 @@ body footer#company p strong {
   }
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+/* hidpi android devices */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-device-width: 480px) {
   body section#wrapper h1 {
     background: url(/images/logotype_square@1.5x.png) no-repeat;
-    background-size: 240px 240px;
   }
   
   body section#wrapper dl dd a.twitter-follow-button span {
@@ -192,10 +197,23 @@ body footer#company p strong {
   }
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+/* iPhone 4 / 4S-type devices */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 480px) {
   body section#wrapper h1 {
     background: url(/images/logotype_square@2x.png) no-repeat;
-    background-size: 240px 240px;
+  }
+  
+  body section#wrapper dl dd a.twitter-follow-button span {
+    background-image: url(/images/twitter_bird@2x.png);
+  }
+}
+
+/* iPad 3rd generation */ 
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 1024px) {
+  body section#wrapper h1 {
+    background: url(/images/logotype_horizontal@2x.png) no-repeat;
   }
   
   body section#wrapper dl dd a.twitter-follow-button span {
