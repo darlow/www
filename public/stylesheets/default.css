@@ -142,9 +142,9 @@ body section#wrapper dl dd a.twitter-follow-button:active {
 
 body section#wrapper dl dd a.twitter-follow-button span {
   display: inline-block;
-  padding: 0 0 0 25px;
+  padding: 0 0 0 21px;
   background: url(/images/twitter_bird.png) left center no-repeat;
-  background-size: 20px 14px;
+  background-size: 16px 13px;
 }
 
 body footer#company {
