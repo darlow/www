@@ -16,7 +16,7 @@
   <meta name="format-detection" content="telephone=no">
 </head>
 
-<% tag :body, filter_nil!({:class => @page[:class]}) do %>
+<% tag :body, :class => @page[:class] do %>
   <section id="wrapper">
     <%= yield %>
   </section>
