@@ -1,0 +1,43 @@
+@mixin font-size($size: 1.4) {
+  font-size: ($size * 10) + px;
+  font-size: $size + rem;
+}
+
+@mixin line-height($size: 1.6, $force-height: false) {
+  @if $force-height == true {
+    height: ($size * 10) + px;
+  }
+  line-height: ($size * 10) + px;
+  line-height: $size + rem;
+}
+
+@mixin text-underline-hover {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin text-no-underline-hover {
+  &:hover { text-decoration: none; }
+}
+
+@mixin font-family($fontname, $filename, $weight: normal, $style: normal, $stretch: normal, $range: false) {
+  @font-face {
+    font-family: $fontname;
+    src: asset-url($filename + '.eot');
+    src: // local($fontname), // disable this to test without the font installed locally
+      asset-url($filename + '.eot?#iefix') format('embedded-opentype'),
+      asset-url($filename + '.woff') format('woff'),
+      asset-url($filename + '.ttf') format('truetype'),
+      asset-url($filename + '.svg#' + $filename) format('svg');
+    font-weight: $weight;
+    font-style: $style;
+    font-stretch: $stretch;
+
+    @if $range {
+      unicode-range: $range;
+    }
+  }
+}
+

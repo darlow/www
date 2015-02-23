@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/stylesheets/default.css" type="text/css">
   <%= style "http://f.fontdeck.com/s/css/9Dd7dKRlsVFVm3xAivdE0m3aiPM/#{request.host}/14640.css" %>
   <link rel="icon" href="/images/icon.icns" sizes="128x128 48x48 32x32 16x16">
-  <link rel="icon" href="/images/icon_16.png" type="image/png">  
+  <link rel="icon" href="/images/icon_16.png" type="image/png">
 <% ["57", "72", "114"].each do |size| %>
   <%= tag :link, :rel => "apple-touch-icon-precomposed", :href => "/images/icon_#{size}.png", :sizes => "#{size}x#{size}" %>
 <% end %>
@@ -20,8 +20,6 @@
   <section id="wrapper">
     <%= yield %>
   </section>
-  
-  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script type="text/javascript" src="/javascripts/application.js"></script>
+
 <% end %>
 </html>

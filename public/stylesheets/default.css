@@ -45,12 +45,12 @@ body section#wrapper h1 {
   font-size: 36px;
   font-style: normal;
   letter-spacing: -1px;
-  
+
   text-indent: -999px;
   overflow: hidden;
   display: block;
   margin: 20px auto;
-  
+
   height: 180px;
   width: 480px;
   background: url(/images/logotype_horizontal.png) no-repeat;
@@ -104,14 +104,14 @@ body section#wrapper dl dd a.twitter-follow-button {
   -ms-text-shadow: 0 1px 0 rgb(207,236,45);
   -o-text-shadow: 0 1px 0 rgb(207,236,45);
   text-shadow: 0 1px 0 rgb(207,236,45);
-  
+
   background: -moz-linear-gradient(top,  rgb(255,255,90) 0%, rgb(149,173,49) 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(255,255,90)), color-stop(100%,rgb(149,173,49)));
   background: -webkit-linear-gradient(top,  rgb(255,255,90) 0%,rgb(149,173,49) 100%);
   background: -o-linear-gradient(top,  rgb(255,255,90) 0%,rgb(149,173,49) 100%);
   background: -ms-linear-gradient(top,  rgb(255,255,90) 0%,rgb(149,173,49) 100%);
   background: linear-gradient(top,  rgb(255,255,90) 0%,rgb(149,173,49) 100%);
-  
+
   -webkit-box-shadow: 0 1px 1px rgb(11,20,27);
   -moz-box-shadow: 0 1px 1px rgb(11,20,27);
   -ms-box-shadow: 0 1px 1px rgb(11,20,27);
@@ -175,11 +175,11 @@ body footer#company p strong {
     background: url(/images/logotype_square.png) no-repeat;
     background-size: 240px 240px;
   }
-  
+
   body section#wrapper p {
     width: 280px;
   }
-  
+
   body section#wrapper p.introduction {
     width: 260px;
   }
@@ -191,7 +191,7 @@ body footer#company p strong {
   body section#wrapper h1 {
     background: url(/images/logotype_square@1.5x.png) no-repeat;
   }
-  
+
   body section#wrapper dl dd a.twitter-follow-button span {
     background-image: url(/images/twitter_bird@1.5x.png);
   }
@@ -204,7 +204,7 @@ body footer#company p strong {
   }
 }
 
-/* iPad 3rd generation */ 
+/* iPad 3rd generation */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 1024px) {
   body section#wrapper h1 {

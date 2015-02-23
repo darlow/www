@@ -3,8 +3,8 @@ class Darlow < Sinatra::Base
   before do
     @page = { :title => "Darlow Technology" }
   end
-  
+
   get "/" do
-    erb :index
+    erb :'pages/home'
   end
 end
