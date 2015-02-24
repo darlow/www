@@ -8,7 +8,7 @@ class Darlow < Sinatra::Base
   set :public_folder,         File.dirname(__FILE__) + '/public'
   set :root_domain,           'darlow.eu'
   set :app_root,              File.expand_path(File.dirname(__FILE__))
-  # set :assets_host,           'cdn.darlow.eu'
+  set :assets_host,           'cdn.darlow.eu'
   set :assets_prefix,         %w(app/assets)
   set :assets_precompile,     %w(templates.js vendor.js application.js application.css *.ico *.icns *.png *.jpg *.svg *.eot *.ttf *.woff)
   set :assets_protocol,       :http
