@@ -2,11 +2,11 @@
 class Darlow < Sinatra::Base
   error 403 do
     @page[:title] = "Forbidden"
-    erb :forbidden
+    erb :'errors/forbidden'
   end
 
-  error 404 do
+  not_found do
     @page[:title] = "Not Found"
-    erb :notfound
-  end  
+    erb :'errors/not_found'
+  end
 end

@@ -1,0 +1,17 @@
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <%= tag :meta, name: 'keywords', content: @page[:keywords].join(', ') if @page.key? :keywords %>
+  <%= tag :meta, name: :robots, content: :noindex if settings.environment == :staging %>
+  <title><%= @page[:title] %></title>
+
+  <%= tag :link, rel: 'shortcut icon', href: image_path('icons/favicon.ico') %>
+  <%= tag :link, rel: 'icon', href: image_path('icons/icons.icns'), sizes: '256x256 48x48 32x32 16x16' %>
+  <% %w{57 72 76 114 120 144 152}.each do |size| %>
+    <%= tag :link, rel: 'apple-touch-icon-precomposed', href: asset_path("icons/icon_#{size}.png"), sizes: "#{size}x#{size}" %>
+  <% end %>
+
+  <link rel="stylesheet" type="text/css" href="//cloud.typography.com/744600/637106/css/fonts.css" />
+  <%= tag :link, rel: 'stylesheet', type: 'text/css', href: asset_path('application.css') %>
+</head>

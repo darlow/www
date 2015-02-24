@@ -1,0 +1,145 @@
+@mixin vendor-prefixed-properties($property, $value) {
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -ms-#{$property}: $value;
+  -o-#{$property}: $value;
+  $property: $value;
+}
+
+@mixin vendor-prefixed-values($property, $value) {
+  $property: '-webkit-#{$value}';
+  $property: '-moz-#{$value}';
+  $property: '-ms-#{$value}';
+  $property: '-o-#{$value}';
+  $property: $value;
+}
+
+@mixin cleared {
+  zoom: 1;
+
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin background-image($url, $background-size: null, $background-position: null, $background-repeat: no-repeat, $type: 'png', $retina: true) {
+  @if $url == none {
+    background-image: none;
+    @if ($retina) {
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+        & { background-image: none; }
+      }
+    }
+  } @else {
+    @if $retina {
+      background-image: image-url($url + '@1x.' + $type);
+    } @else {
+      background-image: image-url($url);
+    }
+
+    @if $background-position {
+      background-position: $background-position;
+    }
+
+    @if $background-size {
+      background-size: $background-size;
+    }
+
+    @if ($retina) {
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+        & { background-image: image-url($url + '@2x.' + $type); }
+      }
+
+      @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-device-pixel-ratio: 3) {
+        & { background-image: image-url($url + '@3x.' + $type); }
+      }
+    }
+
+    background-repeat: $background-repeat;
+  }
+}
+
+@mixin image-icon($url, $background-width, $background-height, $padding-left: 0, $padding-right: 0, $line-height: $background-height, $background-position: left center, $type: 'png') {
+  @include background-image($url, $background-width $background-height, $background-position, $type: $type);
+  padding-left: $background-width + $padding-left;
+  line-height: $line-height;
+}
+
+@mixin image-replacement($url, $background-width, $background-height, $width: $background-width, $height: $background-height, $background-position: 0 0, $type: 'png') {
+  @include background-image($url, $background-width $background-height, $background-position: $background-position, $type: $type);
+  display: block;
+  text-indent: -9999px;
+  overflow: hidden;
+  width: $width;
+  height: $height;
+}
+
+@mixin sprite-icon($url, $background-size, $padding-left: inherit, $background-position: 0 0, $type: 'png') {
+  @include background-image($url, $background-size, $background-position, $type: $type);
+  padding-left: $padding-left;
+}
+
+@mixin sprite-replacement($url, $background-size, $width, $height, $position: 0) {
+  $background-position-y: 0;
+  @if $position > 0 {
+    $background-position-y: -($position) * $height;
+  }
+
+  @include background-image($url, $background-size, 0 $background-position-y);
+  display: block;
+  text-indent: -9999px;
+  overflow: hidden;
+  width: $width;
+  height: $height;
+}
+
+@mixin appearance-none {
+  @include vendor-prefixed-properties(appearance, none);
+}
+
+@mixin transparentize($property, $color, $amount, $property-value: null) {
+  @if $property-value == null {
+    #{$property}: transparentize($color, $amount);
+    body.ie8 & {
+      #{$property}: mix($color, white, (1 - $amount) * 100%);
+    }
+  } @else {
+    #{$property}: $property-value transparentize($color, $amount);
+    body.ie8 & {
+      #{$property}: $property-value mix($color, white, (1 - $amount) * 100%);
+    }
+  }
+}
+
+@mixin min-width($width) {
+  @media only screen and (min-width: $width) {
+    @content;
+  }
+} // @mixin min-width
+
+@mixin max-width($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+} // @mixin max-width
+
+@mixin centre-box($size) {
+  height: $size * 10px;
+  width: $size * 10px;
+  left: 50%;
+  margin-left: -($size / 2) * 10px;
+}
+
+@mixin placeholder {
+  &.placeholder { @content }
+  &::placeholder { @content }
+  &:-ms-input-placeholder { @content }
+  &:-moz-placeholder { @content }
+  &::-webkit-input-placeholder { @content }
+}
