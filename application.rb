@@ -1,5 +1,4 @@
 require 'bundler'
-require 'pry'
 Bundler.require
 
 require 'sinatra/asset_pipeline'
