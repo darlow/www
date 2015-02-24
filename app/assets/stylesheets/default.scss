@@ -3,10 +3,46 @@ html {
 }
 
 body {
+  @include gotham;
+  background-color: black;
+  color: $light-grey;
   margin: 10px;
 }
 
-div, p, ul, ol {
+a {
+  color: $light-grey;
+  text-decoration: none;
+  font-weight: bold;
+  @include transition-property(color border);
+  @include transition-duration(0.3s);
+  border-bottom: 2px solid transparentize($light-grey, 0.8);
+
+  &:hover {
+    color: white;
+    border-color: transparentize(white, 0.4);
+  } // a:hover
+} // a
+
+body, div, p, ul, ol, dl, h2 {
   @include font-size(1.8);
-  @include line-height(2.4);
+
+  @include min-width(640px) {
+    @include font-size(2.2);
+  }
+}
+
+h1 {
+  @include font-size(2);
+
+  @include min-width(640px) {
+    @include font-size(2.4);
+  }
+}
+
+h1, h2 {
+  text-transform: uppercase;
+}
+
+p {
+  margin: 0.5rem 0;
 }

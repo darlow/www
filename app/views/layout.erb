@@ -1,25 +1,14 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title><%= @page[:title] %></title>
-  <link rel="stylesheet" href="/stylesheets/default.css" type="text/css">
-  <%= style "http://f.fontdeck.com/s/css/9Dd7dKRlsVFVm3xAivdE0m3aiPM/#{request.host}/14640.css" %>
-  <link rel="icon" href="/images/icon.icns" sizes="128x128 48x48 32x32 16x16">
-  <link rel="icon" href="/images/icon_16.png" type="image/png">
-<% ["57", "72", "114"].each do |size| %>
-  <%= tag :link, :rel => "apple-touch-icon-precomposed", :href => "/images/icon_#{size}.png", :sizes => "#{size}x#{size}" %>
-<% end %>
+<%= partial :head %>
 
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
-  <meta name="format-detection" content="telephone=no">
-</head>
-
-<% tag :body, :class => @page[:class] do %>
-  <section id="wrapper">
+<% tag :body, class: @page[:class] do %>
+  <section id="content">
     <%= yield %>
   </section>
-
+  <%= script asset_path('vendor.js') %>
+  <%= script asset_path('templates.js') %>
+  <%= script asset_path('application.js') %>
 <% end %>
 </html>
