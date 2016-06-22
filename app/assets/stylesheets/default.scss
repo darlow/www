@@ -1,9 +1,10 @@
 html {
   font-size: 62.5%;
+  line-height: 1.3;
 }
 
 body {
-  @include gotham;
+  @include proxima-nova;
   background-color: black;
   color: $light-grey;
   margin: 10px;
@@ -24,18 +25,18 @@ a {
 } // a
 
 body, div, p, ul, ol, dl, h2 {
-  @include font-size(1.8);
+  @include font-size(2.2);
 
-  @include min-width(640px) {
-    @include font-size(2.2);
+  @include min-width(tablet_small) {
+    @include font-size(2.6);
   }
 }
 
 h1 {
-  @include font-size(2);
+  @include font-size(2.4);
 
-  @include min-width(640px) {
-    @include font-size(2.4);
+  @include min-width(tablet_small) {
+    @include font-size(2.8);
   }
 }
 
