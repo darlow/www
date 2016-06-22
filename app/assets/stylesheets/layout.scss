@@ -2,18 +2,18 @@ section#content {
   max-width: 540px;
   margin: 0 auto;
 
-  @include min-width(640px) {
+  @include min-width(tablet_small) {
     max-width: 740px;
-  } // @min-width(640px)
+  } // @min-width(tablet_small)
 } // section#content
 
 h1 {
   @include image-replacement('logo-small', 300px, 300px);
   margin: 0 auto;
 
-  @include min-width(640px) {
+  @include min-width(tablet_small) {
     @include image-replacement('logo-medium', 480px, 480px);
-  } // @min-width(640px)
+  } // @min-width(tablet_small)
 } // h1
 
 p.introduction {
@@ -25,11 +25,12 @@ dl#contact {
     @include display-flex;
 
     dt, dd {
-      @include font-size(1.4, $line-height: 4);
+      @include font-size(1.4);
+      @include line-height(4);
 
-      @include min-width(640px) {
-        @include font-size(1.7, $line-height: 4);
-      } // @min-width(640px) dl#contact div {dt, dd}
+      @include min-width(tablet_small) {
+        @include font-size(1.7);
+      } // @min-width(tablet_small) dl#contact div {dt, dd}
     } // dl#contact div {dt, dd}
 
     dt {
@@ -49,11 +50,11 @@ footer {
   margin-top: 60px;
 
   h2, p {
-    @include font-size(1.2);
+    @include font-size(1.4);
     margin: 0.5rem 0;
 
-    @include min-width(640px) {
-      @include font-size(1.5);
-    } // @min-width(640px) footer {h2, p}
+    @include min-width(tablet_small) {
+      @include font-size(1.8);
+    } // @min-width(tablet_small) footer {h2, p}
   } // footer {h2, p}
 } // footer
