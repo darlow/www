@@ -8,11 +8,12 @@ section#content {
 } // section#content
 
 h1 {
-  @include image-replacement('logo-small', 300px, 300px);
-  margin: 0 auto;
+  @include image-replacement('logo-small', 300px, 60px);
+  margin: 80px auto;
 
   @include min-width(tablet_small) {
-    @include image-replacement('logo-medium', 480px, 480px);
+    @include image-replacement('logo-medium', 480px, 96px);
+    margin: 120px auto;
   } // @min-width(tablet_small)
 } // h1
 
